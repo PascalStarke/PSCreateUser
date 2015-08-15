@@ -1,11 +1,11 @@
 # GUI.ps1
 # Basic GUI functions
 # Take a look at https://gist.github.com/Clijsters/fc5cbc560071a2a0e9d6
-
+# PSCreateUser - Educational project
 
 # Load Assemblies
-[void] [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") 
-# Similiar to Add-Type -AssemblyName System.Windows.Forms
+[void] [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
+# CmdLet-Way: Add-Type -AssemblyName System.Windows.Forms
 
 $QuestionType = New-Object psobject -property @{
     YesNo = 0
