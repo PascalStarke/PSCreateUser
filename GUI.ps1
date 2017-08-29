@@ -62,7 +62,7 @@ function Ask($Question, $Header, $PossibleAnswers) {
     # positioning the buttons
     #TODO: make it a if-statement - YesNoCancel and YesNo redundancy
     Switch($PossibleAnswers) {
-        $QuestionType.YesNoCancel{
+        $QuestionType.YesNoCancel {
             $Asking.Controls.Add($btnNo)
             $Asking.Controls.Add($btnCancel)
             # Add Event Listener for Click event on $btnYes
@@ -71,7 +71,7 @@ function Ask($Question, $Header, $PossibleAnswers) {
             })
         }
         
-        $QuestionType.YesNo{
+        $QuestionType.YesNo {
             $btnYes.Location = $btnNo.Location
             $btnNo.Location = $btnCancel.Location
             $Asking.Controls.Add($btnNo)
@@ -82,7 +82,7 @@ function Ask($Question, $Header, $PossibleAnswers) {
             
         }
         
-        $QuestionType.OKCancel{
+        $QuestionType.OKCancel {
             $Asking.Controls.Add($btnCancel)
             $btnYes.Text = "OK"
             $btnYes.Location = $btnNo.Location
